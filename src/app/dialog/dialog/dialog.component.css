@@ -1,0 +1,46 @@
+
+
+h2 {letter-spacing: 2px;}
+
+h1 {
+ font-size: medium;
+ text-align: center;
+ letter-spacing: 2px;
+} 
+
+.user {
+ font-weight: bold;
+ letter-spacing: 2px;
+ font-size: medium;
+}
+  
+.confirm {
+ left: 65%;
+ background-image: linear-gradient(119deg, #044945, #204f7b, #2553b5, #1355f2);
+ color: #fff;
+}
+
+.cancel {
+  background-image: linear-gradient(79deg, #790232, #9a0735, #bc0e38, #df163b);
+  color: #fff;
+}
+
+@media (max-width:576px) {
+  .form {
+    box-sizing:content-box;
+  }
+}
+
+@media  (min-width: 315px) and (max-width: 576px) {
+   
+    .confirm {
+      left: 50%;
+     }
+}
+
+@media (max-width: 400px) {
+  .confirm {
+    left: 15%;
+  }
+}
+

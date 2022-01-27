@@ -1,0 +1,47 @@
+<!-- ADD USER BUTTON -->
+
+
+<button mat-button (click)="addDialog()" class="add mt-3">
+  <mat-icon>add</mat-icon>
+  <span> Add new contact</span>
+</button>
+<!-- NO CARD -->
+<div class="alert-danger alert mt-3" *ngIf="users && users.length == 0">
+  <span><strong>Warning! </strong>
+    <i class="fa fa-exclamation-triangle"></i>
+    <br>
+    The page is blank, please add a new card</span>
+</div>
+<!-- CARD -->
+<div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-6 mt-5 mb-4" *ngFor="let user of users">
+    <mat-card class="card">
+      <mat-card-header>
+        <img mat-card-avatar src={{user.photo}} class="photo">
+        <mat-card-title class="text"> {{user.name}} {{user.surname}} </mat-card-title>
+        <mat-card-subtitle class="number"> {{user.number}} </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src={{user.image}} class="image">
+      <mat-card-actions>
+        <div class="row">
+          <div class="col-4">
+            <button mat-icon-button class="edit">
+              <i class="fa fa-pencil" style="color:rgba(15, 15, 206, 0.76);" (click)="editDialog(user)"></i>
+            </button>
+          </div>
+          <div class="col-4">
+            <button mat-icon-button class="star">
+              <i class="fa fa-star" (click)="addFavorite(user)"
+                [ngStyle]="{'color':user.isFavorite ? '#f0f0abde' : 'black'}"></i>
+            </button>
+          </div>
+          <div class="col-4">
+            <button mat-icon-button class="trash">
+              <i class="fa fa-trash" style="color: rgba(223, 28, 28, 0.753)" (click)="openDialog(user)"></i>
+            </button>
+          </div>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

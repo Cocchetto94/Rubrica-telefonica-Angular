@@ -1,0 +1,25 @@
+<!-- TITLE CONTACT -->
+<div class="cont-text mt-3">
+  <h1 class="contact">All contacts</h1>
+</div>
+
+<!-- CARD -->
+<div class="col-12 col-lg-12 col-md-12 col-sm-12 mt-3 mb-3" *ngFor="let user of users">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        <i class="fa fa-id-card"></i>
+        <span class="txt"> {{user.name}} {{user.surname}}</span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <i class="fa fa-phone"></i>
+        <span class="txt"> {{user.number}}</span>
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-icon-button class="cestino">
+          <i class="fa fa-trash" (click)="openDialog(user)"></i>
+        </button>
+      </mat-card-actions>
+    </mat-card-header>
+  </mat-card>
+</div>

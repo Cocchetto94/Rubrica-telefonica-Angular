@@ -1,0 +1,68 @@
+.title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-decoration: wavy;
+
+}
+
+.example-card {
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+  color: black;
+	cursor: pointer;
+	display: block;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  
+}
+
+
+.example-card:hover {
+	color: #333 !important;
+	background-color: transparent;
+	text-shadow: ntwo;
+}
+.example-card:hover:before {
+	top: 0%;
+	bottom: auto;
+	height: 100%;
+}
+.example-card:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #333 !important;
+	background-image: linear-gradient(286deg, #7d5bfa, #9e74d8, #b38cb6, #bfa592);
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+.preferito {
+  position: absolute;
+  left: 95%;
+}
+
+.txt {
+  letter-spacing: 2px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .preferito {
+    position: absolute;
+    left: 90%;
+  }
+
+}
+
+@media (max-width:340px) {
+  .preferito {
+    position: absolute;
+    left: 85%;
+  }
+}

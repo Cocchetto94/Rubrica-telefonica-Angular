@@ -1,0 +1,68 @@
+.example-card {
+    width: 100%;
+    border: 2px solid black;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    
+  }
+
+ 
+  .example-card:hover {
+    color: #fff !important;
+    background-color: transparent;
+    text-shadow: nthree;
+  }
+ .example-card:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+  }
+ .example-card:before {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    content: '';
+    color: #fff !important;
+    background: linear-gradient(316deg, #66003a, #8b002e, #b00020, #d60006);
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0.2s;
+  
+  }
+
+.cestino {
+    position: absolute;
+    left: 95%;
+   }
+
+
+.contact {
+    text-align: center;
+    font-style: italic;
+    text-decoration: wavy;
+    letter-spacing: 2px;
+  }
+
+
+.txt {
+    letter-spacing: 2px;
+    
+  }
+
+@media screen and (max-width: 768px) {
+  .cestino {
+    position: absolute;
+    left: 90%;
+  }
+}
+
+@media (max-width:340px) {
+  .cestino {
+    position: absolute;
+    left: 85%;
+  }
+}

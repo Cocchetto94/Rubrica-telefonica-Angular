@@ -1,0 +1,58 @@
+<!-- EDIT -->
+<ng-container *ngIf="data.function === 'edit'">
+    <h2 mat-dialog-title >{{data.title}}</h2>
+    <mat-dialog-content>
+        <div class="row">
+            <mat-form-field class="col-4 form">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="name" class="col-12-xs">
+            </mat-form-field>
+            <mat-form-field class="col-4 form">
+                <mat-label>Surname</mat-label>
+                <input matInput [(ngModel)]="surname" class="col-12-xs">
+            </mat-form-field>
+            <mat-form-field class="col-4 form">
+                <mat-label>Number</mat-label>
+                <input matInput [(ngModel)]="number" class="col-12-xs">
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+    <div mat-dialog-actions>
+        <button mat-button class="cancel" mat-dialog-close>Cancel</button>
+        <button mat-raised-button class="confirm" (click)="confirm(name, surname, number, photo, image)">Confirm</button>
+    </div>
+</ng-container>
+
+<!-- ADD -->
+<ng-container *ngIf="data.function === 'add'">
+    <h2 mat-dialog-title >{{data.title}}</h2>
+    <mat-dialog-content>
+        <div class="row">
+            <mat-form-field class="col-4 form">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="name">
+            </mat-form-field>
+            <mat-form-field class="col-4 form">
+                <mat-label>Surname</mat-label>
+                <input matInput [(ngModel)]="surname">
+            </mat-form-field>
+            <mat-form-field class="col-4 form">
+                <mat-label>Number</mat-label>
+                <input matInput [(ngModel)]="number">
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+    <div mat-dialog-actions>
+        <button mat-button class="cancel" mat-dialog-close>Cancel</button>
+        <button mat-raised-button class="confirm" (click)="confirm(name, surname, number, photo, image)">Confirm</button>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="data.function === 'delete'">
+<h1 mat-dialog-title>Are you sure to delete <span class="user"> {{this.delUser.name}} {{this.delUser.surname}}</span> ?</h1>
+<div mat-dialog-content></div>
+<div mat-dialog-actions>
+  <button mat-button class="cancel" (click)="close()">Cancel</button>
+  <button mat-raised-button class="confirm" (click)="onDelete()">Confirm</button>
+</div>
+</ng-container>

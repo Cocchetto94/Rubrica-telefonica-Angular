@@ -1,0 +1,24 @@
+<!-- TITLE POPULAR -->
+<h1 class="title mt-3">All favorite contact</h1>
+
+<!-- CARD -->
+<div class="col-12 col-lg-12 col-md-12 col-sm-12 mt-3 mb-3" *ngFor="let user of favoritesContact">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        <i class="fa fa-id-card"></i>
+        <span class="txt"> {{user.name}} {{user.surname}}</span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <i class="fa fa-phone"></i>
+        <span class="txt"> {{user.number}}</span>
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-icon-button class="preferito">
+          <i class="fa fa-star" (click)="remFav(user)"
+            [ngStyle]="{'color':user.isFavorite ? '#F7CA18' : 'black'}"></i>
+        </button>
+      </mat-card-actions>
+    </mat-card-header>
+  </mat-card>
+</div>

@@ -1,0 +1,95 @@
+.mat-toolbar {height: 10vh;}
+
+.mat-sidenav-container{
+    min-height: 15vh !important;
+    background-color: transparent;
+  }
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-size: medium;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+button { min-width: min-content;}
+
+.mat-sidenav-content{font-size:medium;}
+
+.spacer{flex: auto ;}
+
+div {overflow: inherit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* a {
+      text-decoration: none;
+      color: black;
+      font-style: italic;
+  }
+ */
+  
+
+ 
+
+/*  X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap 
+
+
+/* Small devices (landscape phones, 576px and up) 
+@media (min-width: 576px) { 
+   .spacer {
+       flex: auto;
+   }
+   
+    }
+ 
+
+/* Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) {  
+    .spacer {
+        flex: auto;
+    }
+}
+
+/* Large devices (desktops, 992px and up) 
+@media (min-width: 992px) {  
+    .spacer {
+        flex: auto;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) 
+@media (min-width: 1200px) {  
+    .spacer {
+        flex: auto;
+    }
+}
+
+ */
